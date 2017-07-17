@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MapsExample</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pickup_location">Pickup location</string>
+    <string name="drop_location">Drop location</string>
+    <string name="pick_up_empty">Please set pickup location</string>
+    <string name="drop_empty">Please set drop location</string>
+    <string name="address_not_found">Sorry we unable to get address that you searched for, Plese try again</string>
+</resources>

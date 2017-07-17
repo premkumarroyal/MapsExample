@@ -1,0 +1,208 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/location_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="whiteelephant.com.mapsexample.MapsActivity" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="3dp"
+            app:contentPadding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pickup" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/txt_input_pickup_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/pickup_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_curved_white"
+                            android:focusable="false"
+                            android:fontFamily="sans-serif-condensed"
+                            android:hint="@string/pickup_location"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/txt_strong"
+                            android:textSize="15sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/drop" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/txt_input_drop_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/drop_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_curved_white"
+                            android:focusable="false"
+                            android:fontFamily="sans-serif-condensed"
+                            android:hint="@string/drop_location"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/txt_strong"
+                            android:textSize="15sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/route_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/store_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/bg_shadow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_clr"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp">
+
+                <LinearLayout
+                    android:id="@+id/routes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/navigation" />
+
+                        <TextView
+                            android:id="@+id/total_kms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:fontFamily="monospace"
+                            android:text="hello"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="32dp"
+                            android:src="@drawable/circular_clock" />
+
+                        <TextView
+                            android:id="@+id/total_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:fontFamily="monospace"
+                            android:text="23"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="Click here for Route Info"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/no_routes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="No routes found"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Bottom Sheet -->
+    <include layout="@layout/fragment_directions_bottom_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>
